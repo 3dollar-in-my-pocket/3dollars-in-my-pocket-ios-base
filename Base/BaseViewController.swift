@@ -1,6 +1,6 @@
 import UIKit
 
-open class BaseVC: UIViewController {
+open class BaseViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.bindEvent()
