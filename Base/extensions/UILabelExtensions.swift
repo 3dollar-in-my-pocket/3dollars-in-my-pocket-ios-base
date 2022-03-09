@@ -1,7 +1,7 @@
 import UIKit
 
 extension UILabel {
-    func setKern(kern: Float) {
+    public func setKern(kern: Float) {
         guard let text = self.text else { return }
         let attributedString = NSMutableAttributedString(string: text)
         
@@ -13,7 +13,7 @@ extension UILabel {
         self.attributedText = attributedString
     }
     
-    func setLineHeight(lineHeight: CGFloat) {
+    public func setLineHeight(lineHeight: CGFloat) {
         guard let text = self.text else { return }
         let style = NSMutableParagraphStyle()
         
