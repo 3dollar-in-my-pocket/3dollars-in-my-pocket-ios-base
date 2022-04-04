@@ -5,7 +5,7 @@ public struct AlertUtils {
         viewController: UIViewController,
         title: String? = nil,
         message: String? = nil,
-        okbuttonTitle: String? = "확인",
+        okbuttonTitle: String = "확인",
         onTapOk: (() -> Void)?
     ) {
         let okAction = UIAlertAction(title: okbuttonTitle, style: .default) { action in
@@ -19,7 +19,7 @@ public struct AlertUtils {
         viewController: UIViewController,
         title: String? = nil,
         message: String? = nil,
-        okButtonTitle: String? = "확인",
+        okButtonTitle: String = "확인",
         onTapOk: @escaping () -> Void
     ) {
         let okAction = UIAlertAction(title: okButtonTitle, style: .default) { (action) in

@@ -16,7 +16,6 @@ open class BaseViewController: UIViewController {
             viewController: self,
             title: nil,
             message: error.localizedDescription,
-            okbuttonTitle: nil,
             onTapOk: nil
         )
     }
