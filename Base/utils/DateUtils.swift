@@ -20,10 +20,10 @@ public struct DateUtils {
         return dateFormatter.string(from: Date())
     }
     
-    static public func toDate(dateString: String) -> Date {
+    static public func toDate(dateString: String, format: String? = nil) -> Date {
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = Self.defaultFormat
+        dateFormatter.dateFormat = format ?? Self.defaultFormat
         dateFormatter.locale = Locale(identifier: "ko")
         
         return dateFormatter.date(from: dateString)!
