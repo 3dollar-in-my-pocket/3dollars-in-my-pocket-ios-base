@@ -12,6 +12,14 @@ public struct DateUtils {
         return dateFormatter.string(from: date)
     }
     
+    static public func toString(date: Date, format: String?) -> String {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = format ?? Self.defaultFormat
+        dateFormatter.locale = Locale(identifier: "ko")
+        return dateFormatter.string(from: date)
+    }
+    
     static public func todayString(format: String = "yyyy-MM-dd") -> String {
         let dateFormatter = DateFormatter()
         
