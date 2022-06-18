@@ -12,7 +12,7 @@ public struct JsonUtils {
         }
     }
     
-    static public func decode<T: Decodable>(data: Data) -> T? {
+    static public func decode<T: Decodable>(data: Data?) -> T? {
         guard let data = data else { return nil }
         let decoder = JSONDecoder()
         let result = try? decoder.decode(T.self, from: data)
