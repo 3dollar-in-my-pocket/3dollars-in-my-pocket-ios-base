@@ -1,6 +1,10 @@
 import UIKit
 
+import RxSwift
+
 open class BaseView: UIView {
+    public var disposeBag = DisposeBag()
+    
     override public init(frame: CGRect) {
         super.init(frame: frame)
         

@@ -1,6 +1,10 @@
 import UIKit
 
+import RxSwift
+
 open class BaseViewController: UIViewController {
+    public var disposeBag = DisposeBag()
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.bindEvent()

@@ -1,6 +1,10 @@
 import UIKit
 
+import RxSwift
+
 open class BaseTableViewCell: UITableViewCell {
+    public var disposeBag = DisposeBag()
+    
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -10,6 +14,12 @@ open class BaseTableViewCell: UITableViewCell {
     
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    open override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.disposeBag = DisposeBag()
     }
     
     /// adSubviews와 화면의 기본 속성을 설정합니다.
