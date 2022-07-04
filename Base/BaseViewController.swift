@@ -4,6 +4,7 @@ import RxSwift
 
 open class BaseViewController: UIViewController {
     public var disposeBag = DisposeBag()
+    public var eventDisposeBag = DisposeBag()
     
     open override func viewDidLoad() {
         super.viewDidLoad()
