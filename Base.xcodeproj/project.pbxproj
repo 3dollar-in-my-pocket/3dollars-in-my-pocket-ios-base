@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E07675228688CD20078CE5B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6E07675128688CD20078CE5B /* RxCocoa */; };
-		6E07675428688CD20078CE5B /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6E07675328688CD20078CE5B /* RxRelay */; };
-		6E07675628688CD20078CE5B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E07675528688CD20078CE5B /* RxSwift */; };
 		6EB94E7827CB0A4E00609E77 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB94E7727CB0A4E00609E77 /* BaseView.swift */; };
 		6EB94E7A27CB0AA200609E77 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB94E7927CB0AA200609E77 /* BaseViewController.swift */; };
 		6EB94E7C27CB0BE000609E77 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB94E7B27CB0BE000609E77 /* BaseTableViewCell.swift */; };
@@ -23,6 +20,9 @@
 		6EB94E8E27CB1B4900609E77 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB94E8D27CB1B4900609E77 /* UITableViewExtensions.swift */; };
 		6EB94E9027CB1B6700609E77 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB94E8F27CB1B6700609E77 /* UICollectionViewExtensions.swift */; };
 		6EB94E9227CB1B8D00609E77 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB94E9127CB1B8D00609E77 /* DateExtensions.swift */; };
+		6EBFADB6287563550055096C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6EBFADB5287563550055096C /* RxCocoa */; };
+		6EBFADB8287563550055096C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6EBFADB7287563550055096C /* RxRelay */; };
+		6EBFADBA287563550055096C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6EBFADB9287563550055096C /* RxSwift */; };
 		6EFDFA4727C657C9007BF8FD /* Base.docc in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDFA4627C657C9007BF8FD /* Base.docc */; };
 		6EFDFA4827C657C9007BF8FD /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFDFA4527C657C9007BF8FD /* Base.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -51,9 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E07675628688CD20078CE5B /* RxSwift in Frameworks */,
-				6E07675428688CD20078CE5B /* RxRelay in Frameworks */,
-				6E07675228688CD20078CE5B /* RxCocoa in Frameworks */,
+				6EBFADBA287563550055096C /* RxSwift in Frameworks */,
+				6EBFADB8287563550055096C /* RxRelay in Frameworks */,
+				6EBFADB6287563550055096C /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,9 +143,9 @@
 			);
 			name = Base;
 			packageProductDependencies = (
-				6E07675128688CD20078CE5B /* RxCocoa */,
-				6E07675328688CD20078CE5B /* RxRelay */,
-				6E07675528688CD20078CE5B /* RxSwift */,
+				6EBFADB5287563550055096C /* RxCocoa */,
+				6EBFADB7287563550055096C /* RxRelay */,
+				6EBFADB9287563550055096C /* RxSwift */,
 			);
 			productName = Base;
 			productReference = 6EFDFA4227C657C9007BF8FD /* Base.framework */;
@@ -175,7 +175,7 @@
 			);
 			mainGroup = 6EFDFA3827C657C9007BF8FD;
 			packageReferences = (
-				6E07675028688CD20078CE5B /* XCRemoteSwiftPackageReference "RxSwift" */,
+				6EBFADB4287563550055096C /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 6EFDFA4327C657C9007BF8FD /* Products */;
 			projectDirPath = "";
@@ -257,6 +257,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -321,6 +322,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -429,30 +431,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6E07675028688CD20078CE5B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		6EBFADB4287563550055096C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6E07675128688CD20078CE5B /* RxCocoa */ = {
+		6EBFADB5287563550055096C /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E07675028688CD20078CE5B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 6EBFADB4287563550055096C /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		6E07675328688CD20078CE5B /* RxRelay */ = {
+		6EBFADB7287563550055096C /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E07675028688CD20078CE5B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 6EBFADB4287563550055096C /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		6E07675528688CD20078CE5B /* RxSwift */ = {
+		6EBFADB9287563550055096C /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E07675028688CD20078CE5B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 6EBFADB4287563550055096C /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
